@@ -1,4 +1,4 @@
-# This is a large heading
+# This is a large heading 
 
 ## This is a smaller heading
 
@@ -11,7 +11,7 @@ A local *habitation* and a **name**.
 - an unordered
 - list
 
-1. This is
+1. This is&nbsp;
 2. an ordered
 3. list
 
