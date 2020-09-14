@@ -18,8 +18,7 @@ A local *habitation* and a **name**.
 Here is `some code` in the middle of a sentence.
 
 ```
-This is
-a block
+This is &nbsp; a block
 of code
 ```
 
