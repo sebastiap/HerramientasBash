@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 bla bla bla bla
 INFO - bleh bleh bleh
 WARN Ojo pibi
@@ -6,4 +7,14 @@ INFO seguimos por aca
 Info todavia seguimos
 Select * from algo
 SEVERE se fue al tacho mal
+=======
+bla bla bla bla
+INFO - bleh bleh bleh
+WARN Ojo pibi
+ERROR Che se fue todo al traste
+INFO seguimos por aca
+Info todavia seguimos
+Select * from algo
+SEVERE se fue al tacho mal
+>>>>>>> 4558a29e12c42f2922beccf3c327afaded7a9b53
 id=tributariaNP

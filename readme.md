@@ -1,30 +1,26 @@
-# This is a large heading
+# Herramientas Bash
 
-## This is a smaller heading
+## Una experiencia en la linea de comandos...
 
-And as **imagination** bodies forth,
-The forms of things *unknown*, the poet’s pen,
-Turns them to shapes and gives to airy nothing,
-A local *habitation* and a **name**.
+Este proyecto nace como una serie de herramientas para facilitar las tareas de mantenimiento y control de calidad en servidores GNU/Linux.
+Al mismo tiempo, este proyecto ha servido como una experiencia y experimento para adaptarse al manejo de versiones y a la utilizacion del GIT.
+**Puede Fallar**.
 
-- This is
-- an unordered
-- list
+Herramientas Actuales
 
-1. This is
-2. an ordered
-3. list
+- Codenames
+- Guessingame
+- Otros
 
-Here is `some code` in the middle of a sentence.
+Las primeras pruebas (y las mas utiles para el dia a dia) se realizaron experimentando con el comando `grep -E ` y analizando distintos logs.
+
+### Ejemplo de Uso
 
 ```
-This is
-a block
-of code
+source codenames.sh
+grepic warn server.logs
 ```
 
-Here is how you make [a link](https://www.wikipedia.org/).
+Todas las herramientas de este proyecto seran realizados en [Bash](https://es.wikipedia.org/wiki/Bash).
 
-![This is an image.](https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-
-nano README.md
+![BASH](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS9bEPRfE8mKU6ZxJfKdlJkjMON4qyEZMw_eBrRuAnFYJ4_9a_CuslM9Z_ERBxWGjseIU&usqp=CAU)
