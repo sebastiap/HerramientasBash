@@ -18,6 +18,8 @@ function bakant { cp "$1"{,.bak} ;}
 
 function lst { ls -l | awk '{ print $9 ":" $5 }' ;}
 
+function maspesados {find / -type f -printf "%s\t%p\n" | sort -n | tail -10}
+
 function rand { echo $RANDOM ;}
 
 #Comandos AWK
@@ -34,4 +36,5 @@ echo -e "${green}bakant${yellow} FILE ${NC}: crea un backup del archivo deseado 
 echo -e "${green}greper${yellow} FILE ${NC}: busca errores en un log y los marca con un color"
 echo -e "${green}grepic${yellow} WORD FILE ${NC}: busca en un log y los marca con un color"
 echo -e "${green}grvacias${yellow} FILE ${NC}: cuenta lineas vacias en un archivo"
+echo -e "${green}maspesados ${NC}: Muestra el top de los 10 archivos mas pesados en disco"
 echo -e "${green}rand {NC}: Muestra por pantalla un numero aleatorio"
