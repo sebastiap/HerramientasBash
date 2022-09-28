@@ -22,6 +22,9 @@ function maspesados {find / -type f -printf "%s\t%p\n" | sort -n | tail -10}
 
 function rand { echo $RANDOM ;}
 
+function erasure {find . -type f -name "*" -exec rm -f {} ;}
+
+
 #Comandos AWK
 #Revisar
 function random { echo random | awk '{print int(rand()*100)}' ; }
@@ -29,6 +32,8 @@ function random { echo random | awk '{print int(rand()*100)}' ; }
 function xrandom { awk 'BEGIN { for (i = 1; i <= '$1'; i++) print int(101 * rand()) }' ;}
 
 #function reemplazar { awk "{ gsub(/$1/,$2); print}" "$3";}
+# Borrar cantidad masiva de archivos en un directorio
+#find . -type f -name "*" -exec rm -f {} ;
 
 echo -e "${yellow}Se dieron de alta los comandos"
 echo -e "${green}buscar${yellow} FILE ${NC}: busca por nombre un archivo o una expresion regular "
@@ -37,4 +42,5 @@ echo -e "${green}greper${yellow} FILE ${NC}: busca errores en un log y los marca
 echo -e "${green}grepic${yellow} WORD FILE ${NC}: busca en un log y los marca con un color"
 echo -e "${green}grvacias${yellow} FILE ${NC}: cuenta lineas vacias en un archivo"
 echo -e "${green}maspesados ${NC}: Muestra el top de los 10 archivos mas pesados en disco"
+echo -e "${green}erasure ${NC}: Borra una cantidad masiva de archivos del directorio actual"
 echo -e "${green}rand {NC}: Muestra por pantalla un numero aleatorio"
