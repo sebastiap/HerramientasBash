@@ -47,28 +47,28 @@ El siguiente commando buscara el pattern  legacy.xml en el contenido de todos lo
 
 find . -name "*.java" -print0 | xargs -0 grep -i ".*Legacy.*xml"
 
-## Expresiones regulares en grep (traducir del ingles)
+## Expresiones regulares en grep
 
  * .	Matches any single character.	grep '.' file
 grep 'foo.' input
-* ?	The preceding item is optional and will be matched, at most, once.	grep 'vivek?' /etc/passwd
-* *	The preceding item will be matched zero or more times.	grep 'vivek*' /etc/passwd
-* +	The preceding item will be matched one or more times.	ls /var/log/ | grep -E "^[a-z]+\.log."
-* {N}	The preceding item is matched exactly N times.	egrep '[0-9]{2} input
-* {N,}	The preceding item is matched N or more times.	egrep '[0-9]{2,} input
-* {N,M}	The preceding item is matched at least N times, but not more than M times.	egrep '[0-9]{2,4} input
-* -	Represents the range if it’s not first or last in a list or the ending point of a range in a list.	grep ':/bin/[a-z]*' /etc/passwd
-* ^	Matches the empty string at the beginning of a line; also represents the characters not in the range of a list.	grep '^vivek' /etc/passwd
+* ?	El item precedente es opcional y sera matcheado como mucho una vez. EJ	grep 'vivek?' /etc/passwd
+* \*	El item precedente sera matcheado como cero o mas veces. 	grep 'vivek*' /etc/passwd
+* \+	El item precedente sera matcheado como una o mas veces.	ls /var/log/ | grep -E "^[a-z]+\.log."
+* {N}	El item precedente sera matcheado exactamente N veces.	egrep '[0-9]{2} input
+* {N,}	El item precedente sera matcheado exactamente N o mas veces.	egrep '[0-9]{2,} input
+* {N,M}	El item precedente sera matcheado al menos N veces pero no mas de M veces.	egrep '[0-9]{2,4} input
+* \-	Representa un rango de valores siempre y cuando no este como primer valor o ultimo en una lista	grep ':/bin/[a-z]*' /etc/passwd
+* ^	Representa el inicio de la linea.Seria como un string vacio al inicio de la linea.	grep '^vivek' /etc/passwd
 grep '[^0-9]*' /etc/passwd
-* $	Matches the empty string at the end of a line.	grep '^$' /etc/passwd
-* \b	Matches the empty string at the edge of a word.	vivek '\bvivek' /etc/passwd
-* \B	Matches the empty string provided it’s not at the edge of a word.	grep '\B/bin/bash /etc/passwd
-* \<	Match the empty string at the beginning of word.	grep '\<="" kbd="" style="box-sizing: inherit;">
-* \>	Match the empty string at the end of word.	grep 'bash\>' /etc/passwd
+* $	Representa el fin de la linea.Seria como un string vacio al final de la linea.	grep '^$' /etc/passwd
+* \b	Identifica un caracter que debe estar dentro de una palabra.vivek '\bvivek' /etc/passwd
+* \B	Identifica un caracter que debe estar dentro de una palabra pero no en el inicio o el fin.	grep '\B/bin/bash /etc/passwd
+* \<	Representa el inicio de la palabra.	grep '\<="" kbd="" style="box-sizing: inherit;">
+* \>	Representa el final de la palabra.	grep 'bash\>' /etc/passwd
 grep '\' /etc/passwd
-* |	(pipe symbol) - the logical OR operation.	
-* () 	allows us to group several characters to behave as one.	
-* []	the character is one of those included within the square brackets. [^abc] niega
-* [a-d] = abcd	
+* |	(pipe symbol) - Operador logico.	
+* () 	Nos permite agrupar una serie de expresiones como una.	
+* []	El caracter es uno de los incluidos entre ellos. [^abc]  Ejemplo [a-d] = abcd	
+el ^, aca adentro niega la expresion.
 
 
