@@ -1,4 +1,5 @@
 # Procesos en Linux
+Los procesos en Linux tienen un nivel de prioridad que va desde -19 a 20(Siendo este el maximo). Por defecto la prioridad es 0.
 
 ## Primer y Segundo plano
 * Un proceso que esta en primer plano toma el control de la sesion actual y la devuelve cuando finaliza.
@@ -24,5 +25,11 @@ Otras opciones que tiene son:
 
 ### Comando Kill
 Manda una señal de finalizacion al proceso.
+
+kill [numero] proceso
+
+### Comando nice
+Da prioridad a un comando 
+nice -n prioridad comando
 
 
