@@ -20,8 +20,13 @@ head - Muestra las primeras 10 lineas de un archivo.
 * chmod - cambia los permisos de usuario , grupo y owner.
 * chwon - cambia el owner de un fichero.
 
-sort - ordena alfabeticamente
-uniq - no muestra lineas repetidas
-ip addr show - Muestra nuestro ip
+* sort - ordena alfabeticamente
+* uniq - no muestra lineas repetidas
+* ip addr show - Muestra nuestro ip
 
 ## comando grep
+Permite buscar un patron dentro de un fichero. Listara todos los ficheros que cumplan con las expresiones regurales que le pasemos como parametro.
+
+
+## comando find
+Permite buscar ficheros y/o directorios a partir de un patron.
