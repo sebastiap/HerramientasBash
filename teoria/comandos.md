@@ -30,3 +30,24 @@ Permite buscar un patron dentro de un fichero. Listara todos los ficheros que cu
 
 ## comando find
 Permite buscar ficheros y/o directorios a partir de un patron.
+
+### Ejemplos
+El siguiente commando buscara el pattern  legacy..xml en el contenido de todos los archivos que terminen con .java.
+find . -name "*.java" -print0 | xargs -0 grep -i ".*Legacy.*xml"
+
+* Para buscar errores severos y marcar con color
+egrep -i -n -A 3  --color "error|severe" *.log
+
+* Find para archivos mas grandes de X tamaño Por ejemplo 10 MB:
+$ find . -size +10M -type f -print0 | xargs -0 ls -Ssh | sort -z
+* Find broken symbolic links
+$ find . -type l ! -exec test -e {} \; -print
+* Find commandos mas usados
+$ history | awk '{print $2}' | sort|uniq -c|sort -nr|head -15
+* Find last sleep time
+Find when was the last time your system went to sleep:
+$ journalctl -u sleep.target
+
+
+Bibliografia:
+https://www.ochobitshacenunbyte.com/2014/04/02/busqueda-de-fichero-y-carpetas-en-gnu-linux/
