@@ -12,3 +12,9 @@ En este subdirectorio del repositorio, pasare las notas y apuntes tomados de mis
 * uname (muestra informacion del proceso)
 * cat muestra lineas de fichero concatenado
 * grep (busca uno o varios patrones en ficheros del directorio indicado)
+
+## Otros Comandos utiles
+
+* nl  Numera las lineas no vacias de un fichero.
+* head muestra las primeras lineas de un archivo sin abrirlo. Util para previsualizar un archivo.
+* tail muestra las ultimas lineas de un archivo sin abrirlo. Util para seguir un log con la opcion -f.
