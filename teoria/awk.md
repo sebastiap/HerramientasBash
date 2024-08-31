@@ -11,6 +11,7 @@ introducir ningún tipo de instrucción al respecto en el código.
 
 ## Sintaxis
  * awk '[programa]' [filename]
+ * awk '[programa]' [flujo de entrada]
 
 ### Variables predeterminadas
 Una de las peculiaridades que permite al intérprete de AWK trabajar como lo hace,es que al leer cada linea da valores a una serie de variables predefinidas:
@@ -19,12 +20,31 @@ Una de las peculiaridades que permite al intérprete de AWK trabajar como lo hac
 • $0 contiene toda la linea leida
 • $1, $2, ... $NF cada uno de los campos leidos
 
+### BEGIN y END
+Se puede utilizar BEGIN para ejecutar algo antes del programa y END para corrar algo despues del programa.
+
+### Estructuras dee control
+* Se puede utilizar bucles y condicionales como en cualquier lenguaje de control.
+* Ademas, se puede redireccionar la salida como en la linea de comando.
+
 ## Ejemplos de uso
 ps |  awk '{print $1}'
 Imprime la primer columna del flujo de datos de ps.
 
 awk ’{print $NR,$0 }’ fichero.txt
 muestra en pantalla las lineas del fichero numeradas.
+
+df | awk '/\D:/ {print $1"\t"$2"\t"$3}'
+Mostrarme los campos del disco D: tabulados
+
+ps -ef |  awk '{if ($NF == "/usr/bin/bash") print $0}'
+Imprime todos los comandos /usr/bin/bash 
+
+awk ’
+BEGIN{print "Provincia V1 V2 V3 V4"}
+$3>4{print $0}
+END{print "ADIOS."}
+’ fichero.txt
 
 
 ## Bibliografia
